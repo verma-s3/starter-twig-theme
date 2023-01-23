@@ -1,0 +1,24 @@
+{#
+/**
+ * Block Name: Hero
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+{% if is_preview %}
+    <p>Click the pencil to reveal the field.</p>
+{% endif %}
+
+<div id="hero-{{ block.id }}" class="wrapper hero">
+    <div class="top-grad"></div>
+    <div class="bottom-grad"></div>
+    <img src="{{ Image(fields.hero_image).src }}" alt="{{ Image(fields.hero_image).alt }}">
+    <div class="hero-content">
+        {{ fields.header_description }}
+        <div class="scroll-down">
+            <span><i></i>Scroll Down</span>
+        </div>
+    </div>
+  
+</div>

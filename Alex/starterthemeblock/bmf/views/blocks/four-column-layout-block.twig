@@ -1,0 +1,21 @@
+{#
+/**
+ * Block Name: Four Column List
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+{% if is_preview %}
+    <p>Click the pencil to reveal the field.</p>
+{% endif %}
+
+<div id="four-column-{{ block.id }}" class="wrapper four-column">
+    {% for block in fields.icon_blocks %}
+        <div class="list-block">
+            <img src="{{ Image(block.icon).src|resize(43,43) }}" alt="{{ Image(block.icon).alt }}">
+            <h3>{{ block.heading }}</h3>
+            <p>{{ block.description }}</p>
+        </div>
+    {% endfor %}
+</div>

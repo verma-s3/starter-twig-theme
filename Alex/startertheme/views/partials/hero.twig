@@ -1,0 +1,22 @@
+<div class="hero">
+    <div class="hero-content width-1700">
+        {% if fn('is_page', 'home') or fn('is_page', 'landscaping-features') %}
+            {{ acf.meta('header_text') }}
+        {% else %}
+            <h1>{{ acf.title }}</h1>
+        {% endif %}
+
+        {% if fn('is_page', 'home') %}
+            <a class="custom-btn" href="/#intro">Learn More</a>
+        {% endif %}
+    </div>
+    <img src="{{ site.theme.link }}/static/images/crushed-stones.png" alt="Crushed Stones">
+    <img src="{{ site.theme.link }}/static/images/top-view-of-plant-2.png" alt="Top View of Plant">
+    <img src="{{ site.theme.link }}/static/images/group-of-bricks.png" alt="Group of Bricks">
+    
+    {% if fn('is_page', 'home') %}
+        <img src="{{ site.theme.link }}/static/images/cedar-wood.png" alt="Cedar Wood">
+    {% else %}
+        <img class="mulch" src="{{ site.theme.link }}/static/images/mulch.png" alt="Multch">
+    {% endif %}
+</div>

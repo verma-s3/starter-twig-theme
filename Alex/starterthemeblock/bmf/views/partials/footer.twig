@@ -1,0 +1,29 @@
+<div id="contact" class="width-1500">
+
+    <h2>Wanting to get started or have some questions?</h2>
+
+    <div class="tripleCol">
+        <p>Address</p>
+        <p>{{ options.address }}</p>
+    </div>
+    <div class="tripleCol">
+        <p>Email</p>
+        <p>{{ fn('do_shortcode', '[email-obfuscate email="' ~ options.email ~ '"]') }}</p>
+    </div>
+    <div class="tripleCol">
+        <p>Phone</p>
+        <p><a href="tel:+1{{ options.phone }}">{{ options.phone|replace("-", ".") }}</a></p>
+    </div>
+
+    <div class="center">
+        <img src="{{ site.theme.link }}/static/images/bmf-logo.svg" alt="BMF Carpentry Logo">
+    </div>
+    
+    <div class="copyright center">
+        <span class="copyright-text">&copy; BMF Carpentry {{"now"|date('Y')}}. </span>
+        <span class="site-by">Site by <a href="https://psone.ca/" target="_blank" rel="noopener noreferrer">PSOne</a>
+        <span> | <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google Terms</a></span>
+    </div>
+</div>
+
+

@@ -1,0 +1,37 @@
+<!-- *** COPYRIGHT *** -->
+<span class="copyright-text"> &#169; Superior Projects <?php echo date('Y'); ?>.</span>
+<span class="site-by">Site by <a href="http://psone.ca/" target="_blank">Print Studio One</a><span> | </span><a href="http://threesixnorth.com/" target="_blank">Three-Six North Marketing</a></span>
+
+
+<!-- *** Email Obfuscate shortcode *** -->
+Email Obfuscate Shortcode: [email-obfuscate email="super8@innkeepers.ca" link_title="Email Bob!"]
+Anti-Spambot Email Shortcode plugin: [email linktext="Waldo Neustaedter"]waldo@goldkey21.com?subject=Inquiry from WhySteinbach[/email]
+
+
+<!-- *** Map iframe Container *** -->
+<div id="map-container">
+	<iframe id="map-block" src="/wp-content/themes/firewood2go/map.html" width="100%" height="450" frameborder="0" style="border:0"  "allowfullscreen"> </iframe>
+</div>
+
+
+<!-- *** Strip phone nymber of non-numeric characters and display in a link *** -->
+<?php $contactPhone = strtr(CFS()->get('phone'), array('.' => '', ',' => '', '-' =>'', ' ' =>'', '(' =>'', ')' =>'')); ?>
+<?php echo '<p class="contact-phone">t. <a href="tel:+1'.$contactPhone.'">' . CFS()->get('phone') . '</a>'; ?>
+
+
+<!-- *** Obfuscate dynamically entered email *** -->
+<p class="contact-email">e. <?php echo do_shortcode('[email-obfuscate email="' . (CFS()->get('email')) . '"]'); ?></p>
+
+
+<!-- *** Scroll to Top *** use with less *** use with javascript *** -->
+<a href="javascript:" id="return-to-top"><i class="glyphicon glyphicon-chevron-up" aria-hidden="true"></i></a>
+
+<!-- *** Bootstrap Vertical Align *** use with less *** -->
+<div class="col-sm-4 vcenter">
+    <a href="https://mcccanada.ca/" target="_blank" class="greyscale"><img src="/wp-content/themes/schinkel-properties/images/logo-mcc.png" alt="Mennonite Central Committee" /></a>
+</div><!--
+--><div class="col-sm-4 vcenter">
+    <a href="http://unitedwaywinnipeg.ca/impact/koats-for-kids/" target="_blank" class="greyscale"><img src="/wp-content/themes/schinkel-properties/images/logo-kfk.png" alt="Koats for Kids" /></a>
+</div><!--
+--><div class="col-sm-4 vcenter">
+    <a href="http://www.habitat.mb.ca/" target="_blank" class="greyscale"><img src="/wp-content/themes/schinkel-properties/images/logo-hfh.png" alt="Habitat for Humanity" /></a>

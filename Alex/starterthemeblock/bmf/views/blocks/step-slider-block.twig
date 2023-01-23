@@ -1,0 +1,42 @@
+{#
+/**
+ * Block Name: Steps Slider
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+{% if is_preview %}
+    <p>Click the pencil to reveal the field.</p>
+{% endif %}
+
+<div id="steps-slider-{{ block.id }}" class="wrapper steps-slider">
+    <div class="doubleCol">
+        {{ fields.slider_intro }}
+    </div>
+
+    <div class="doubleCol slider">
+        {% for slide in fields.step_slider %}
+            {% set counter = (counter | default(0)) + 1 %}
+            <div class="slick-slideshow__slide">
+                <h3>{{ counter }}. {{ slide.title }}</h3>
+                {% if loop.index == 1 %}
+                    <img src="{{ site.theme.link }}/static/images/bar1.svg" alt="Colour Bar">
+                {% elseif loop.index == 2 %} 
+                    <img src="{{ site.theme.link }}/static/images/bar2.svg" alt="Colour Bar">
+                {% elseif loop.index == 3 %} 
+                    <img src="{{ site.theme.link }}/static/images/bar3.svg" alt="Colour Bar">
+                {% elseif loop.index == 4 %} 
+                    <img src="{{ site.theme.link }}/static/images/bar4.svg" alt="Colour Bar">
+                {% elseif loop.index == 5 %} 
+                    <img src="{{ site.theme.link }}/static/images/bar5.svg" alt="Colour Bar">
+                {% endif %}
+                <ul>
+                    {% for row in slide.list %}
+                        <li>{{ row.list_item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,6 @@
+[ui]
+username = Alex Lindsay <alex@psone.ca>
+ssh = ssh -C
+
+[paths]
+default = ssh://hg@bitbucket.org/printstudioone/fast-air

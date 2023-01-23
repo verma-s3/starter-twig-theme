@@ -1,0 +1,5 @@
+[ui]
+username = Your Name <your@mail>
+syntax: glob
+
+wp-config.php

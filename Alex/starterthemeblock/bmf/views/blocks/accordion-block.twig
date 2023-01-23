@@ -1,0 +1,100 @@
+{#
+/**
+ * Block Name: Accordion
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+{% if is_preview %}
+    <p>Click the pencil to reveal the field.</p>
+{% endif %}
+
+<div id="accordion-{{ block.id }}" class="wrapper">
+ 
+    <div id="about">
+               {# Accordion Buttons #}
+               <div class="about-buttons mobile">
+                {% for row in fields.accordion %}
+                    {% if loop.index == 1 %}
+                        <button class="about-button about-button1 load-about">{{ row.title }}</button>
+                    {% elseif loop.index == 2 %}
+                        <button class="about-button about-button2">{{ row.title }}</button>
+                    {% elseif loop.index == 3 %}
+                        <button class="about-button about-button3">{{ row.title }}</button>
+                    {% elseif loop.index == 4 %}
+                        <button class="about-button about-button4">{{ row.title }}</button>
+                    {% elseif loop.index == 5 %}
+                        <button class="about-button about-button5">{{ row.title }}</button>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {# Accordion Blocks #}
+        {% for row in fields.accordion %}
+            {% if loop.index == 1 %}
+                <div class="about-block about-block1">
+                    <div class="doubleCol">
+                        <h2>{{ row.title }}</h2>
+                    </div>
+                    <div class="doubleCol">
+                        <h2>{{ row.description }}</h2>
+                    </div>
+                </div>
+            {% elseif loop.index == 2 %}
+                <div class="about-block about-block2">
+                    <div class="doubleCol">
+                        <h2>{{ row.title }}</h2>
+                    </div>
+                    <div class="doubleCol">
+                        <h2>{{ row.description }}</h2>
+                    </div>
+                </div>
+            {% elseif loop.index == 3 %}
+                <div class="about-block about-block3">
+                    <div class="doubleCol">
+                        <h2>{{ row.title }}</h2>
+                    </div>
+                    <div class="doubleCol">
+                        <h2>{{ row.description }}</h2>
+                    </div>
+                </div>
+            {% elseif loop.index == 4 %}
+                <div class="about-block about-block4">
+                    <div class="doubleCol">
+                        <h2>{{ row.title }}</h2>
+                    </div>
+                    <div class="doubleCol">
+                        <h2>{{ row.description }}</h2>
+                    </div>
+                </div>
+            {% elseif loop.index == 5 %}
+                <div class="about-block about-block5">
+                    <div class="doubleCol">
+                        <h2>{{ row.title }}</h2>
+                    </div>
+                    <div class="doubleCol">
+                        <h2>{{ row.description }}</h2>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        {# Accordion Buttons #}
+        <div class="about-buttons desktop">
+            {% for row in fields.accordion %}
+                {% if loop.index == 1 %}
+                    <button class="about-button about-button1 load-about">{{ row.title }}</button>
+                {% elseif loop.index == 2 %}
+                    <button class="about-button about-button2">{{ row.title }}</button>
+                {% elseif loop.index == 3 %}
+                    <button class="about-button about-button3">{{ row.title }}</button>
+                {% elseif loop.index == 4 %}
+                    <button class="about-button about-button4">{{ row.title }}</button>
+                {% elseif loop.index == 5 %}
+                    <button class="about-button about-button5">{{ row.title }}</button>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+    </div>
+</div>

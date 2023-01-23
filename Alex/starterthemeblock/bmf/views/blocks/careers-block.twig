@@ -1,0 +1,55 @@
+{#
+/**
+ * Block Name: Careers
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+{% if is_preview %}
+    <p>Click the pencil to reveal the field.</p>
+{% endif %}
+
+<div id="careers-{{ block.id }}" class="wrapper careers">
+    <div class="doubleCol">
+        <h2>Current Employment</h2>
+    </div>
+
+    {% if fields.careers is not empty %}
+        <div class="doubleCol">
+            {% for career in fields.careers %}
+                {% set counter = (counter | default(0)) + 1 %}
+                <div class="career-{{counter}} career">
+                    <p>{{ career.position }}</p>
+                    <h3>{{ career.title }}</h3>
+                    {{ career.description|split(' ')|slice(0, 34)|join(' ') ~ '<span class="dots">...</span>' }}
+               
+    
+                </div>
+                <div class="more-info-{{counter}} more-info">
+                    {{ career.description|split(' ')|slice(34, 10000000000000)|join(' ') }}
+                    <a href="/application-form">Apply Now</a>
+                </div>
+
+            
+                <button class="view-more-{{counter}}"><span>View More</span></button>
+
+                <script>
+                    jQuery(document).ready(function($) {
+                        $('.more-info-{{counter}}').hide();
+
+                        $(".view-more-{{counter}}").click(function () {
+                          $('.career-{{counter}} .dots').toggle();
+                          $('.more-info-{{counter}}').slideToggle();   
+                          $(".view-more-{{counter}} span").fadeOut(function () {
+                              $(".view-more-{{counter}} span").text(($(".view-more-{{counter}} span").text() == 'View Less') ? 'View More' : 'View Less').fadeIn();
+                          });
+                        });
+                    });
+                </script>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h3>There are currently no opportunities available. Please check back soon!</h3>
+    {% endif %}
+</div>

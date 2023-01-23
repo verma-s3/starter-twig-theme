@@ -1,0 +1,18 @@
+<div id="contact" class="width-1700">
+    <div class="doubleCol">
+        {{ options.footer_description }}
+        <a href="{{ options.facebook }}" target="_blank" rel="noopener noreferrer"><img src="{{ site.theme.link }}/static/images/facebook.svg" alt="See us on Facebook" title="See us on Facebook"></a>
+        <a href="{{ options.instagram }}" target="_blank" rel="noopener noreferrer"><img src="{{ site.theme.link }}/static/images/instagram.svg" alt="See us on Instagram" title="See us on Facebook"></a>
+    </div>
+
+    <div class="doubleCol">
+        {{ function('do_shortcode', '[contact-form-7 id="10" title="Contact Form"]') }}
+    </div>
+
+    <div class="copyright center">
+        <span class="copyright-text">&copy; Deerwood Projects {{"now"|date('Y')}}. </span>
+        <span class="site-by">Site by <a href="https://psone.ca/" target="_blank" rel="noopener noreferrer">PSOne</a>
+        <span> | <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google Terms</a></span>
+    </div>
+</div>
+

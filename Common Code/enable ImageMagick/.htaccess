@@ -1,0 +1,11 @@
+# These Lines Added By Hosting Company please do not remove
+<IfModule mod_suphp.c>
+suPHP_ConfigPath /home/mhv/public_html
+</IfModule>
+
+<Files php.ini>
+order allow,deny
+deny from all
+</Files>
+# End of Hosting Company Entries
+

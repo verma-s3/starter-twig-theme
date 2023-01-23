@@ -1,0 +1,86 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: @mont;
+    color: @blue;
+    font-size: 23px;
+    line-height: 1.1;
+    margin-bottom: 26px;
+    font-weight: 500;
+    @media @min992 {
+        margin-bottom: 60px;
+        font-size: 35px;
+    }
+}
+
+h2 {
+    font-size: 16px;
+    color: @green;
+    @media @min992 {
+        font-size: 20px;
+    }
+   
+}
+
+
+h3 {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+    @media @min992 {
+        font-size: 25px;
+    }
+    @media @min1500 {
+        font-size: 25px;
+    }
+}
+
+h4 {
+    font-family: @mont;
+}
+
+h5,h6 {
+    color: @black;
+    font-size: 16px;
+}
+
+p,li,a,td,span, legend, label, .wpcf7-response-output {
+    font-family: @mont;
+    font-size: 16px;
+    color: @black;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    font-weight: 500;
+    @media @min992 {
+        font-size: 18px;
+    }
+}
+
+// input[type="submit"] {
+//     background: transparent;
+//     color: @white !important;
+//     width: 68px !important;
+// }
+
+// button {
+//     background-color: transparent;
+//     border: none;
+//     &:hover {
+//         cursor: pointer;
+//     }
+// }
+
+// .wp-block-button__link {
+//     padding: 0;
+//     margin-top: 30px;
+//     &::before {
+//         opacity: 1 !important;
+//     }
+// }
+
+a, button, .wp-block-button__link {
+    transition: .3s;
+    text-decoration: none;
+    &:hover {
+        color: @green;
+    }
+}

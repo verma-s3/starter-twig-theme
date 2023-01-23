@@ -1,0 +1,57 @@
+    {% block html_head_container %}
+        {% include 'partials/html-header.twig' %}
+        {% block head %}{% endblock %}
+    </head>{% endblock %}
+
+    <body class="{{body_class}}" data-template="base.twig">
+        <a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content')}}</a>
+        <a href="javascript:" id="return-to-top"><i class="glyphicon glyphicon-chevron-up" aria-hidden="true"></i></a>
+
+        <header class="header">
+            {% block header %}
+                <div class="wrapper width-1500">
+                    <a class="site-logo" href="{{site.url}}" rel="home">
+                        <img src="{{ site.theme.link }}/static/images/bmf-logo.svg" alt="BMF Carpentry Logo">
+                    </a>
+
+                    <nav id="site-navigation" class="nav-main" role="navigation">
+                        {% include "menu.twig" with{'items':menu.get_items} %}
+                    </nav>
+                </div>
+            {% endblock %}
+        </header>
+
+        <section id="content" role="main" class="content-wrapper">
+            <div class="wrapper{{sidebar_class}}"> 
+                {% block content %}{% endblock %}
+            </div>
+
+            {# {% if sidebar %}
+                <aside class="layout-sidebar">{{sidebar}}
+                </aside>
+            {% endif %} #}
+            
+        </section>
+
+        
+        <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </div>
+
+        <div class="overlay" id="overlay">
+			<div class="width-1700">
+				<nav id="site-navigation3" class="overlay-menu" role="navigation">
+                    {% include "menu.twig" with{'items':menu.get_items} %}
+                </nav>
+			</div>
+        </div>
+        
+        {% block footer %}
+            <footer id="footer">{% include 'partials/footer.twig' %}
+            </footer>
+            {{ function('wp_footer')}}
+        {% endblock %}
+    </body>
+</html>

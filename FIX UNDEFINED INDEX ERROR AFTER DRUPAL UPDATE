@@ -1,0 +1,60 @@
+HOWTO TROUBLESHOOT ERROR AFTER DRUPAL UPGRADE TO 7.31, 7.32, 7.33, 7.34, 7.35, 7.36, 7.37, 7.38, 7.39 (NOTICE: UNDEFINED INDEX)
+
+After the the upgrade to the recent Drupal version (in our example Drupal 7.31 - 7.34) you might get one of these errors: Notice: Undefined index: name in system_requirements() (line 34 in ../modules/system/system.install) or Notice: Undefined index: version in system_requirements() (line 36 in ../modules/system/system.install), solution is the same! This howto shows you how to troubleshoot this error.
+
+Step 1:
+
+Modify modules/system/system.install
+Change following part of code.
+
+// Display the currently active install profile, if the site
+// is not running the default install profile.
+$profile = drupal_get_profile();
+if ($profile != 'standard') {
+$info = system_get_info('module', $profile);
+$requirements['install_profile'] = array(
+'title' => $t('Install profile'),
+'value' => $t('%profile_name (%profile-%version)', array(
+'%profile_name' => $info['name'],
+'%profile' => $profile,
+'%version' => $info['version']
+)),
+'severity' => REQUIREMENT_INFO,
+'weight' => -9
+);
+}
+}
+
+Change to:
+
+// Display the currently active install profile, if the site is not running
+// the default install profile and the profile is enabled.
+$profile = drupal_get_profile();
+if ($profile != 'standard') {
+$modules = module_list();
+if (isset($modules[$profile])) {
+$info = system_get_info('module', $profile);
+$requirements['install_profile'] = array(
+'title' => $t('Install profile'),
+'value' => $t('%profile_name (%profile)', array(
+'%profile_name' => $info['name'],
+'%profile' => $profile,
+)),
+'severity' => REQUIREMENT_INFO,
+'weight' => -9
+);
+}
+}
+}
+
+
+Step 2:
+
+Modify includes/install.inc
+After step 1 you might get the error: Notice: Undefined index: distribution_name en drupal_install_profile_distribution_name() (línea 207 de /htdocs/public/drupal7oreilly3/includes/install.inc). You can solve this by making the following changes to includes/install.inc
+
+Two (--) means that this must change with others that are two (++)
+
+-- return $info['distribution_name'];
+++ if ( ! array_key_exists('distribution_name', $info)) $info['distribution_name'] = 'Drupal';
+++ return $info['distribution_name'];

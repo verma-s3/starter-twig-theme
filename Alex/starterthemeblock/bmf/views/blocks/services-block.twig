@@ -1,0 +1,195 @@
+{#
+/**
+ * Block Name: Services
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+{% if is_preview %}
+    <p>Click the pencil to reveal the field.</p>
+{% endif %}
+
+<div id="services-{{ block.id }}" class="wrapper services">
+     {# Accordion Blocks #}
+    <div id="services">
+        <div class="buttons-container">
+            {# Accordion Buttons #}
+            <div class="services-buttons mobile">
+                <button class="services-button services-button1">Pipe Dock</button>
+                <button class="services-button services-button2">Boathouse</button>
+                <button class="services-button services-button3 load-services">Timberframe</button>
+            </div>
+
+            <div id="intro" class="doubleCol intro">
+                <div class="services-block services-intro1">
+                    <h5>Pipe Dock</h5>
+                    {{ fields.pipe_dock_section_description_1 }}
+                </div>
+                <div class="services-block services-intro2">
+                    <h5>Boat House</h5>
+                    {{ fields.boat_house_section_description_1 }}
+                </div>
+                <div class="services-block services-intro3">
+                    <h5>Timberframe</h5>
+                    {{ fields.timberframe_section_description_1 }}
+                </div>
+                {# Accordion Buttons #}
+                <div class="services-buttons desktop">
+                    <button class="services-button services-button1">Pipe Dock</button>
+                    <button class="services-button services-button2">Boathouse</button>
+                    <button class="services-button services-button3 load-services">Timberframe</button>
+                </div>
+            </div>
+
+            <div class="doubleCol">
+                <div class="services-block services-intro-img1">
+                    <img src="{{ Image(fields.pipe_dock_section_image_1).src('img-block') }}" alt="{{ Image(fields.pipe_dock_section_image_1).alt }}">
+                </div>
+                <div class="services-block services-intro-img2">
+                    <img src="{{ Image(fields.boat_house_section_image_1).src('img-block') }}" alt="{{ Image(fields.boat_house_section_image_1).alt }}">
+                </div>
+                <div class="services-block services-intro-img3">
+                    <img src="{{ Image(fields.timberframe_section_image_1).src('img-block') }}" alt="{{ Image(fields.timberframe_section_image_1).alt }}">
+                </div>
+            </div>
+        </div>
+    
+
+        {# PIPE DOCK SECTION #}
+        <div class="services-block services-block1">
+            <section>
+                <div class="doubleCol">
+                    <img src="{{ Image(fields.pipe_dock_section_image_2).src('img-block') }}" alt="{{ Image(fields.pipe_dock_section_image_2).alt }}">
+                </div>
+
+                <div class="doubleCol">
+                    <h2>{{ fields.pipe_dock_section_description_2 }}</h2>
+                </div>
+            </section>
+
+            <section>
+                <img src="{{ Image(fields.pipe_dock_section_image_3).src('full-width') }}" alt="{{ Image(fields.pipe_dock_section_image_3).alt }}">
+            </section>
+
+            <section>
+                <h2 class="doubleCol">{{ fields.pipe_dock_section_description_3 }}</h2>
+
+                <div class="doubleCol align-top">
+                    {{ fields.pipe_dock_section_description_4 }}
+                </div>
+
+                <div class="doubleCol align-top">
+                    {{ fields.pipe_dock_section_description_5 }}
+                </div>
+            </section>
+        </div>
+        {# END PIPE DOCK SECTION #}
+
+
+        {# BOATHOUSE SECTION #}
+        <div class="services-block services-block2">
+            <section>
+                <div class="doubleCol">
+                    <img src="{{ Image(fields.boat_house_section_image_2).src('img-block') }}" alt="{{ Image(fields.boat_house_section_image_2).alt }}">
+                </div>
+
+                <div class="doubleCol">
+                    <h2>{{ fields.boat_house_section_description_2 }}</h2>
+                </div>
+            </section>
+
+            <section>
+                <div class="doubleCol align-top">
+                    <img class="badge" src="{{ site.theme.link }}/static/images/badge.svg" alt="BMF Logo Badge">
+                    {{ fields.boat_house_section_description_3 }}
+                </div>
+
+                <div class="doubleCol align-top">
+                    <h2>{{ fields.boat_house_section_description_4 }}</h2>
+                </div>
+            </section>
+
+            <section class="transform">
+                <div class="doubleCol transform">
+                    <img src="{{ Image(fields.boat_house_section_image_3).src('img-block') }}" alt="{{ Image(fields.boat_house_section_image_3).alt }}">
+                </div>
+
+                <div class="doubleCol transform">
+                    {{ fields.boat_house_section_description_5 }}
+                </div>
+            </section>
+
+            <section>
+                <div class="doubleCol">
+                    {{ fields.boat_house_section_description_65 }}
+                </div>
+
+                <div class="doubleCol">
+                    <h2>{{ fields.boat_house_section_description_7 }}</h2>
+                </div>
+            </section>
+
+        </div>
+        {# END BOATHOUSE SECTION #}
+
+        
+        {# TIMBERFRAME SECTION #}
+        <div class="services-block services-block3">
+            <section>
+                <div class="doubleCol">
+                    <img src="{{ Image(fields.timberframe_section_image_2).src('img-block') }}" alt="{{ Image(fields.timberframe_section_image_2).alt }}">
+                </div>
+
+                <div class="doubleCol">
+                    <h2>{{ fields.timberframe_section_description_2 }}</h2>
+                </div>
+            </section>
+
+            <section>
+                <div class="doubleCol align-top">
+                    <img class="badge" src="{{ site.theme.link }}/static/images/badge.svg" alt="BMF Logo Badge">
+                    {{ fields.timberframe_section_description_3 }}
+                </div>
+
+                <div class="doubleCol align-top">
+                    <h2>{{ fields.timberframe_section_description_4 }}</h2>
+                </div>
+            </section>
+
+            <section>
+                <img src="{{ Image(fields.timberframe_section_image_3).src('full-width-large') }}" alt="{{ Image(fields.timberframe_section_image_3).alt }}">
+            </section>
+
+            <section>
+                <div class="doubleCol align-top">
+                    {{ fields.timberframe_section_description_5 }}
+                </div>
+
+                <div class="doubleCol align-top">
+                    {{ fields.timberframe_section_description_6 }}
+                </div>
+            </section>
+
+            <section>
+                <img src="{{ Image(fields.timberframe_section_image_4).src('full-width') }}" alt="{{ Image(fields.timberframe_section_image_4).alt }}">
+            </section>
+
+            <section>
+                <h2 class="tim-title">{{ fields.timberframe_section_description_8 }}</h2>
+                <div class="tripleCol align-top">
+                    {{ fields.timberframe_section_description_9 }}
+                </div>
+                <div class="tripleCol align-top">
+                    {{ fields.timberframe_section_description_10 }}
+                </div>
+                <div class="tripleCol align-top">
+                    {{ fields.timberframe_section_description_11 }}
+                </div>
+            </section>
+
+        </div>
+        {# END TIMBERFRAME SECTION #}
+
+    </div>
+</div>

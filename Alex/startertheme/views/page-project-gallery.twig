@@ -1,0 +1,15 @@
+{% extends "base.twig" %} 
+
+    {% block content %}
+
+        {% if gallery == true %}
+            <div class="project-gallery center">
+                {{ gallery }}
+                <div class="view-more-projects">
+                    {{ viewMoreProjects }}
+                </div>
+                <button id="view-more">View More</button>
+            </div>
+        {% endif %}
+        
+    {% endblock %}

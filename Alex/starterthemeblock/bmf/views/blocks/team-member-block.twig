@@ -1,0 +1,41 @@
+{#
+/**
+ * Block Name: Team Members
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+{% if is_preview %}
+    <p>Click the pencil to reveal the field.</p>
+{% endif %}
+
+<div id="team-{{ block.id }}" class="wrapper team">
+    <div class="doubleCol">
+        <h2>{{ fields.team_title }}</h2>
+    </div>
+    
+    <div class="doubleCol t">
+        {% for member in fields.team_members %}
+            <div class="doubleCol member">
+                {% if loop.index <= 2 %}
+                    <img src="{{ Image(member.image).src('team') }}" alt="{{ Image(member.image).alt }}">
+                    <h3>{{ member.title }}</h3>
+                    <p>{{ member.description }}</p>            
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="other-members">
+        {% for member in fields.team_members %}
+            <div class="doubleCol block-member member">
+                {% if loop.index >= 3 %}
+                    <img src="{{ Image(member.image).src('team') }}" alt="{{ Image(member.image).alt }}">
+                    <h3>{{ member.title }}</h3>
+                    <p>{{ member.description }}</p>            
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
