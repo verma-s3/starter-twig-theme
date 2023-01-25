@@ -16,6 +16,7 @@ jQuery(document).ready(function($) {
         duration: 1200,
         easing:'ease-in-quad',
         disable: 'mobile',
+        once: true
     });
    
   // //*** Smooth Scroll ***
