@@ -131,11 +131,18 @@ class StarterSite extends Timber\Site
 		// 	)
 		// );
 
+
+		//at the end after register custom post type
+		// register_taxonomy('taxonomy_name','linked_post'), array('other_things_associated_with_the_taxonomy-but_labels_are_must')
+		// register_taxonomy('recipe_type', 'recipe', array('hierarchical' => true, 'label' => __( 'Recipe Category', 'progression' ), 'query_var' => true, 'rewrite' => true));
+		// register_taxonomy('recipe_method', 'recipe', array('hierarchical' => true, 'label' => __( 'Preparation Methods', 'progression' ), 'query_var' => true, 'rewrite' => true));
+		// register_taxonomy('recipe_ingredients', 'recipe', array('hierarchical' => true, 'label' => __( 'Feature Ingredients', 'progression' ), 'query_var' => true, 'rewrite' => true));
+
 	}
 	
 	/** This is where you can register custom taxonomies. */
 	public function register_taxonomies() {
-
+		
 	}
 
 	
