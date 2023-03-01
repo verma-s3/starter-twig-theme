@@ -29,44 +29,39 @@
 // paddings
 // ========================================================================== //
 .padding-lr{
-  padding-left: @xs*3;
-  padding-right: @xs*3;
+  padding-inline: 30;
   @media @min768{
-    padding-left: @xs*5;
-    padding-right: @xs*5;
+    padding-inline: 50;
   }
   @media @min992{
-    padding-left: @xs*10;
-    padding-right: @xs*10;
+    padding-inline: 100;
   }
   @media @min1600{
-    padding-left: @xs*14;
-    padding-right: @xs*14;
+    padding-inline: 140;
   }
 }
-.padding-tb(@top, @bottom, @top-dk, @bottom-dk){
-  padding-top: @top;
-  padding-bottom: @bottom;
+.padding-tb(@mobile, @desktop){
+  padding-block: @mobile;
   @media @min768{
-    padding-top: @top-dk;
-    padding-bottom: @bottom-dk;
+    padding-block: @desktop;
   }
 }
 // ========================================================================== //
 // margins
 // ========================================================================== //
-.margin-top{
-  margin-top: @xs*5;
+.margin-lr{
+  margin-inline: 30;
+  @media @min768{
+    margin-inline: 50;
+  }
+  @media @min992{
+    margin-inline: 100;
+  }
+  @media @min1600{
+    margin-inline: 140;
+  }
 }
-// ========================================================================== //
-// Positioning
-// ========================================================================== //
-.zero {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
+
 // ========================================================================== //
 // Flex
 // ========================================================================== //

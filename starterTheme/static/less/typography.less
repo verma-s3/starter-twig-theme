@@ -1,3 +1,15 @@
+/*  Guidlines for font-size range
+    Formula: font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    Example: font-size: calc(70px + (84 - 70) * ((100vw - 300px) / (1600 - 300)));
+
+    Usage: .font-size(48,28);
+*/
+
+.font-size(@maxsize, @minsize){    
+    font-size: ~"calc(@{minsize}px + ( @{maxsize} - @{minsize} ) * ((100vw - 370px) / (1920 - 370)))";
+}
+
+
 h1,h2,h3,h4,h5,h6 {
     font-family: @mont;
     color: @blue;
