@@ -12,87 +12,65 @@
 
 h1,h2,h3,h4,h5,h6 {
     font-family: @mont;
-    color: @blue;
-    font-size: 23px;
+    color: @green;
+    .font-size(80,48);
     line-height: 1.1;
     margin-bottom: 26px;
-    font-weight: 500;
+    font-weight: 700;
     @media @min992 {
         margin-bottom: 60px;
-        font-size: 35px;
     }
 }
 
 h2 {
-    font-size: 16px;
-    color: @green;
-    @media @min992 {
-        font-size: 20px;
-    }
-   
+    .font-size(60,40);
+   margin-bottom: 20px;
 }
 
 
 h3 {
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 1.5;
+    font-weight: 700;
+   .font-size(48,20);
     margin-bottom: 22px;
-    @media @min992 {
-        font-size: 25px;
-    }
-    @media @min1500 {
-        font-size: 25px;
-    }
 }
 
 h4 {
-    font-family: @mont;
+    .font-size(30, 20);
+    margin-bottom: 30px;
 }
 
 h5,h6 {
-    color: @black;
-    font-size: 16px;
+    .font-size(20, 16);
+    margin-bottom: 5px;
 }
 
 p,li,a,td,span, legend, label, .wpcf7-response-output {
     font-family: @mont;
-    font-size: 16px;
     color: @black;
     line-height: 1.5;
-    margin-bottom: 18px;
-    font-weight: 500;
-    @media @min992 {
-        font-size: 18px;
-    }
+    font-weight: 400;
+    .font-size(20, 16);
 }
-
-// input[type="submit"] {
-//     background: transparent;
-//     color: @white !important;
-//     width: 68px !important;
-// }
-
-// button {
-//     background-color: transparent;
-//     border: none;
-//     &:hover {
-//         cursor: pointer;
-//     }
-// }
-
-// .wp-block-button__link {
-//     padding: 0;
-//     margin-top: 30px;
-//     &::before {
-//         opacity: 1 !important;
-//     }
-// }
 
 a, button, .wp-block-button__link {
     transition: .3s;
     text-decoration: none;
     &:hover {
-        color: @green;
+       text-decoration: underline;
+    }
+}
+
+mark{
+    color: @green;
+    background-color: @white;
+    transition: all .3s ease-in-out;
+}
+
+p{
+    &:not(:last-child){
+        margin-bottom: 18px;
+    }
+    &:only-child{
+        margin-bottom: 0px;
     }
 }
