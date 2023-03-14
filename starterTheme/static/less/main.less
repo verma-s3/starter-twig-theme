@@ -102,7 +102,7 @@
 ***********************************/
 // .get-in-touch {
 //     margin-bottom: 159px;
-//     @media @min992 {
+//     @media @min1024 {
 //         margin-bottom: 202px;
 //     }
 //     span a {
@@ -130,7 +130,7 @@
 
 // .rounded-padding {
 //     padding-left: 17px;
-//     @media @min992 {
+//     @media @min1024 {
 //         padding-left: 27px;
 //     }
 // }
@@ -147,7 +147,7 @@
 //         margin-bottom: 37px;
 //         height: 408px;
 //     }
-//     @media @min992 {
+//     @media @min1024 {
 //         margin-bottom: 55px;
 //         height: 408px;
 //     }
@@ -186,9 +186,31 @@
 .grecaptcha-badge {
     opacity: 0 !important;
 }
-.error404 {
-    .hero.sub-hero {
-        padding-bottom: 109px;
+.error404 {    
+    .error-block{padding-bottom: 100px;}
+    h1{
+        .font-size(180,80);
+        text-shadow: 
+        1px 1px 1px @blue,    
+        2px 2px 1px @blue,
+        3px 3px 1px @blue,
+        4px 4px 1px @blue,
+        5px 5px 1px @blue,
+        6px 6px 1px @blue,
+        7px 7px 1px @blue,
+        8px 8px 1px @blue,
+        25px 25px 8px rgba(0,0,0, 0.2);
+    }
+    h3{
+        color: @green;
+    }
+    .back-home{
+        .custom-btn(@green, @ltgreen);
+        max-width: max-content;
+        margin: auto;
+        margin-top: 40px;
+        width: 100%;
+        display: block;
     }
 }
 
@@ -296,7 +318,7 @@ html, body{
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   .button_container {
     display: none;
   }
@@ -436,7 +458,7 @@ form {
         width: 133px;
         margin: 0 auto;
         color: @blue;
-        @media @min992 {
+        @media @min1024 {
             float: left;
         }
         &:hover {
@@ -608,7 +630,7 @@ header {
     @media @min768{
         width: 270px;
     }
-    @media @min992 {
+    @media @min1024 {
         // margin-left: 68px;
         width: auto;  
     }
@@ -618,13 +640,13 @@ header {
         @media @min768{
             width: 270px;
         }
-        @media @min992 {
+        @media @min1024 {
             width: auto;  
         }
     }
     // img {
     //     width: 69px;
-    //     @media @min992 {
+    //     @media @min1024 {
     //         width: auto;  
     //     }
     // }
@@ -647,7 +669,7 @@ header {
     float: right;
     margin-top: 17px;
     display: none;
-    @media @min992 {
+    @media @min1024 {
         display: inline-block;
     }
     @media @min1500 {
@@ -717,7 +739,7 @@ footer {
         span:nth-of-type(2) {
             display: block;
             margin-bottom: 0;
-            @media @min992 {
+            @media @min1024 {
                 display: inline-block;
             }
         }
@@ -731,7 +753,7 @@ footer {
 
 // .copyright-text {
 //     display: block;
-//     @media @min992{
+//     @media @min1024{
 //         display: inline-block;
 //     }
 // }
@@ -739,7 +761,7 @@ footer {
 // span:nth-of-type(2) {
 //     display: inline-block;
 //     margin-bottom: 0;
-//     @media @min992 {
+//     @media @min1024 {
 //         display: inline-block;
 //     }
 // }

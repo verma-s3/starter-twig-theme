@@ -29,14 +29,14 @@ include('config.php');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'EHQ#fEVQTy]6)]&mS*n>I=C x-Sp/G]>)Qw,*m@LF3$kD>]H1Q-!I>_`hO!h/2kK');
-define('SECURE_AUTH_KEY',  'j/=7Gs~5A5pkD<p8qT9|dqg.*E+WvU-)8Mw/+W~;Roc}IL7nT8%uad5=!vL45LrD');
-define('LOGGED_IN_KEY',    '?-cpJNl98tZ%VX|%DKp0Da{ebd7;M5N,7+.k0<mylGwj8 t$q?a~rY#!eDK0TiMK');
-define('NONCE_KEY',        '{I`a9-@8!Wea1|D&pw!#Fb0fwsOXj%6+ P0w%TV%~G1=n!~polq3;S<F`r=%DH+;');
-define('AUTH_SALT',        'R=ju|DtOf$4XTp)0+AtKY;Vt K+fj+@K7vjOBVm,q2z8EhIUCN28r7oOXzkhi%0Q');
-define('SECURE_AUTH_SALT', '|(MigNPoy%_PRt1K6uuMc`FGf+aZGKD|W;m~ct2QBk^B*iPg8;YlpNP6)q>ENjxd');
-define('LOGGED_IN_SALT',   '4aZi|}8YAB@UX!tyy-8L6Bt,*ey(RZi9!.cnf~@d.Lc]s*)k-9Uvu&]87h^/GuT!');
-define('NONCE_SALT',       'rLK6`}<who/RByG/iRoP}T^o,4+7D+-GlG;P~Y]_?gw`d/*`azbxVsGq)`5*Z&9J');
+define('AUTH_KEY',         'ko@78R2cPK =y9:2D/4dOz#eS.[8!tg1VJ|U9rRST%j=FIOd/tIO]c=x87z*4|su');
+define('SECURE_AUTH_KEY',  '&d47t_Xd2r@Yv$DKlnHU&F<o<jiy6<|~CJX]y<P (BHE&%~V>-c!J#|:]M[cjui2');
+define('LOGGED_IN_KEY',    '0=t.m.$v:ztsGfl2+ ++M=BHkB{(nnBIm-:k$_1o{ bJ.~n|~Bf,JuP>`UHh*h#v');
+define('NONCE_KEY',        '-m?M1~eoZ_{A(K1-t7BWi_v!qSzx+hUKui0nMe*dr0?V,+EW&O`3(Gz(L(a^ym^+');
+define('AUTH_SALT',        ':[SBO%Kj&5uQ|z]dy%2Cj<#b&4^AF4lYxD4YpP|l~@2ibt:I&yB|h1M=]f_nW;wr');
+define('SECURE_AUTH_SALT', 'kpgJ+ivD?z<O$pa~QZ]A{IkdKLM}j@DwS].eXWN.TLb7SBR]}S,K?V,a|TbF/[ 3');
+define('LOGGED_IN_SALT',   'Y:lYlp~KYn)hvHxUa&C7AXEx@mzbiCLr^{&>O^VVgFf|t=Me0xGa)Szy?)rQWWx6');
+define('NONCE_SALT',       ';z4M:aK$/TrRNA8h;m{evmb@xbK.9LI*oWN~n8{M0c)FBvZ.lEse]`LfsEo~3F6L');
 
 
 
