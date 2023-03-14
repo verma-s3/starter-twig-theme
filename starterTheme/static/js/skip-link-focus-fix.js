@@ -60,20 +60,22 @@
 // 	}
 // } )();
 
-(function ($) {
-    $(window).on('hashchange', function () {
-        var elementId = location.hash.substring(1);
-        var $element = $('#' + elementId);
 
-        if ($element.length) {
-            if (!/^(?:a|select|input|button|textarea)$/i.test($element.prop('tagName'))) {
-                $element.attr('tabindex', '-1');
-            }
+// third point another code for accessibility
+// (function ($) {
+//     $(window).on('hashchange', function () {
+//         var elementId = location.hash.substring(1);
+//         var $element = $('#' + elementId);
 
-            $element.focus();
-        }
-    });
-})(jQuery);
+//         if ($element.length) {
+//             if (!/^(?:a|select|input|button|textarea)$/i.test($element.prop('tagName'))) {
+//                 $element.attr('tabindex', '-1');
+//             }
+
+//             $element.focus();
+//         }
+//     });
+// })(jQuery);
 
 // in css file:
 /* 
