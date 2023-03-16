@@ -445,7 +445,13 @@ html, body{
       left: 0;
     }
   }
-  
+.form-placeholder{
+    color: @blue !important;
+    opacity: 1;
+    font-weight: 300;
+    font-family: @mont;
+    font-size: 18px;
+} 
 
 form {
     textarea {
@@ -482,32 +488,16 @@ form {
         }
     }
     ::-webkit-input-placeholder { /* WebKit browsers */
-        color: @blue !important;
-        opacity: 1;
-        font-weight: 300;
-        font-family: @mont;
-        font-size: 18px;
+        .form-placeholder();
     }
     :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color: @blue !important;
-        opacity: 1;
-        font-weight: 300;
-        font-family: @mont;
-        font-size: 18px;
+        .form-placeholder();
     }
     ::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color: @blue !important;
-        opacity: 1;
-        font-weight: 300;
-        font-family: @mont;
-        font-size: 18px;
+        .form-placeholder();
     }
     :-ms-input-placeholder { /* Internet Explorer 10+ */
-        color: @blue !important;
-        opacity: 1;
-        font-weight: 300;
-        font-family: @mont;
-        font-size: 18px;
+        .form-placeholder();
     }
 }
 .right {
@@ -572,7 +562,7 @@ button:focus {
     display: block;
     font-family: @mont;
     font-size: 20px;
-    width: 209px;
+    // width: 209px;
     border-radius: 50px;
     .center();
   
