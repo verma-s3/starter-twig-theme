@@ -87,7 +87,7 @@ class StarterSite extends Timber\Site
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
-		// add_filter( 'timber/context', array( $this, 'reading_time' ) );
+		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts_and_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'loadGoogleFonts' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'loadFavicon' ) );
@@ -115,6 +115,18 @@ class StarterSite extends Timber\Site
 		parent::__construct();
 	}
 
+	/**
+	 * My custom Twig functionality.
+	 *
+	 * @param \Twig\Environment $twig
+	 * @return \Twig\Environment
+	 */
+	public function add_to_twig( $twig ) {
+		require_once('custom-function.php');
+		
+		return $twig;
+	} 
+	
 	/** This is where you can register custom post types. */
 	public function register_custom_post_types() {
 		//Recipes
@@ -277,17 +289,17 @@ class StarterSite extends Timber\Site
 	// *** Remove Editor ***
 	public function remove_editor() {
 		if (isset($_GET['post'])) {
-				$id = $_GET['post'];
-				$template = get_post_meta($id, '_wp_page_template', true);
-				switch ($template) {
-						case 'page-templates/page-home.php':
+			$id = $_GET['post'];
+			$template = get_post_meta($id, '_wp_page_template', true);
+			switch ($template) {
+				case 'page-templates/page-home.php':
 
-						remove_post_type_support('page', 'editor');
-						break;
-						default :
-						// Don't remove any other template.
-						break;
-				}
+				remove_post_type_support('page', 'editor');
+				break;
+				default :
+				// Don't remove any other template.
+				break;
+			}
 		}
 	}
 
