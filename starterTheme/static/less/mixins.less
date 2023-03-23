@@ -29,15 +29,21 @@
 // paddings
 // ========================================================================== //
 .padding-lr{
-  padding-inline: 30;
+  padding-inline: 30px;
   @media @min768{
-    padding-inline: 50;
+    padding-inline: 50px;
   }
   @media @min1024{
-    padding-inline: 100;
+    padding-inline: 80px;
   }
   @media @min1600{
-    padding-inline: 140;
+    padding-inline: 100px;
+  }
+}
+.padding-tb(){
+  padding-block: @s-32;
+  @media @min768{
+    padding-block: @s-64;
   }
 }
 .padding-tb(@mobile, @desktop){
@@ -45,6 +51,10 @@
   @media @min768{
     padding-block: @desktop;
   }
+}
+.padding{
+  .padding-lr();
+  .padding-tb();
 }
 // ========================================================================== //
 // margins
