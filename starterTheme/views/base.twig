@@ -15,8 +15,8 @@
 
         {% block header %}
             <header class="header">
-                <div class="wrapper">
-                    <a class="site-logo" href="{{site.url}}" rel="home">
+                <div class="wrapper w-1920">
+                    <a class="site-logo" href="{{site.url}}" rel="home" aria-label="{{site.name}}">
                         {# {{source (directory ~ '/static/images/logo/tricor-color-logo.svg') }} #}
                     </a>
 
@@ -51,8 +51,8 @@
             <span class="bottom"></span>
         </div>
 
-        <div class="overlay" id="overlay">            
-            <a class="site-logo" href="{{site.url}}" rel="home">
+        <div class="overlay" id="overlay" aria-hidden="hidden">            
+           <a class="site-logo" href="{{site.url}}" rel="home" aria-label="{{site.name}}">
                 {# {{source (directory ~ '/static/images/logo/tricor-color-logo.svg') }} #}
             </a> 
 			<div class="overlay-nav-main">
