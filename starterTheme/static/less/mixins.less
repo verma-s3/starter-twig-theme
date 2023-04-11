@@ -1,14 +1,17 @@
 // ========================================================================== //
 // Max-widths
 // ========================================================================== //
-
+.width(@width){ // example: 1920px
+	max-width: @width;
+	width: 100%;
+}
 .width(@width, @margin){ // example: 1920px
 	max-width: @width;
 	width: 100%;
-	margin-inline: @margin; //ex: 0 auto
+	margin-inline: @margin; //ex: auto
 }
-.w-1920{
-  max-width: 1920px;
+.container{
+  max-width: var(--content-width);
   width: 100%;
   margin-inline: auto;
 }
@@ -33,26 +36,23 @@
 // paddings
 // ========================================================================== //
 .padding-lr{
-  padding-inline: 30px;
+  padding-inline: var(--space-xs);
   @media @min768{
-    padding-inline: 50px;
+    padding-inline: var(--space-sm);
   }
   @media @min1024{
-    padding-inline: 80px;
-  }
-  @media @min1600{
-    padding-inline: 100px;
+    padding-inline: var(--space-md)
   }
 }
 .padding-tb(){
-  padding-block: @s-32;
-  @media @min768{
-    padding-block: @s-64;
+  padding-block: var(--space-md);
+  @media @min1024{
+    padding-block: var(--space-lg);
   }
 }
 .padding-tb(@mobile, @desktop){
   padding-block: @mobile;
-  @media @min768{
+  @media @min1024{
     padding-block: @desktop;
   }
 }
@@ -64,15 +64,12 @@
 // margins
 // ========================================================================== //
 .margin-lr{
-  margin-inline: 30;
+  margin-inline: var(--space-xs);
   @media @min768{
-    margin-inline: 50;
+    margin-inline: var(--space-sm);
   }
   @media @min1024{
-    margin-inline: 100;
-  }
-  @media @min1600{
-    margin-inline: 140;
+    margin-inline: var(--space-md)
   }
 }
 
@@ -98,5 +95,11 @@
   }
 }
 // ========================================================================== //
-// animation
+// menu
 // ========================================================================== //
+
+.menu-alignment{
+  display: flex;
+  gap: calc(2.5 * var(--space-unit));;
+  align-items: center;
+}
