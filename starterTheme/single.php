@@ -13,7 +13,8 @@
 // 	'posts_per_page' => -1,
 // 	'post_status' => 'publish',
 // 	'order'   => 'ASC',
-// 	'post__not_in' => array(get_the_ID())
+// 	'post__not_in' => array(get_the_ID()), // or array($post->ID)
+//  'orderby'        => 'rand',
 // ];
 $context         = Timber::context();
 $timber_post     = Timber::get_post();

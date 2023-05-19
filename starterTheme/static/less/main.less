@@ -67,7 +67,11 @@
 #content[tabindex="-1"]:focus {
     outline: 0;
 }
-
+a, select, button, input{
+    &:focus{
+        outline: 2px solid var(--pri-200);
+    }
+}
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -330,10 +334,7 @@ body {
 
         .overlay-menu {
             position: relative;
-            font-size: 50px;
-            font-weight: 400;
             text-align: left;
-            margin-top: 35px;
         }
 
         ul {
@@ -344,15 +345,11 @@ body {
             position: relative;
             height: 100%;
 
-            li {
+            > li {
                 display: block;
                 position: relative;
                 opacity: 0;
                 margin: 0;
-
-                ul {
-                    display: none;
-                }
 
                 a {
                     display: block;
@@ -360,17 +357,31 @@ body {
                     color: var(--white);
                     text-decoration: none;
                     overflow: hidden;
-                    font-size: 25px;
+                    .font-size(60,40);
                     text-transform: none;
                     margin-top: 0px;
-                    font-weight: 500;
+                    font-weight: 400;
                     margin-bottom: 0;
-                    font-weight: 700;
 
                     &:hover {
                         opacity: 1;
                     }
                 }
+                // > ul{
+                //     display: none;
+                //     > li{
+                //         a{
+                //             .font-size(27,23);
+                //         }
+                //     }
+                // }
+                // &.menu-item-44{
+                //     cursor: pointer;
+                //     a{
+                //         .display-flex(flex, 30px, row, center);
+                //         pointer-events: none;
+                //     }
+                // }
             }
         }
     }
@@ -407,7 +418,8 @@ form {
         width: 133px;
         margin: 0 auto;
         color: var(--pri-100);
-
+        appearance: none;
+        border-radius: 0;
         @media @min1024 {
             float: left;
         }
@@ -422,17 +434,28 @@ form {
     }
 
     input,
-    textarea {
+    textarea, select {
         padding: 8px 0;
         border: none;
         border-bottom: 1.5px solid var(--pri-100);
         width: 100%;
         font-family: var(--font-primary);
         font-size: 18px;
-
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0;
         &:focus {
-            outline: none;
+            // outline: none;
         }
+    }
+
+    select{
+        background: url("/wp-content/themes/themename/static/images/drop-down.svg") no-repeat;
+        background-size: 12px;
+        background-position: calc(100% - 10px) center;
+        background-repeat: no-repeat;
+        background-color: var(--white);
     }
 
     ::-webkit-input-placeholder {
@@ -477,10 +500,10 @@ form {
     transform: scaleX(-1);
 }
 
-button:focus,
-input:focus {
-    outline: none;
-}
+// button:focus,
+// input:focus {
+//     outline: none;
+// }
 
 div {
     box-sizing: border-box;
@@ -504,10 +527,10 @@ div {
 // }
 
 
-a:focus,
-button:focus {
-    outline: none;
-}
+// a:focus,
+// button:focus {
+//     outline: none;
+// }
 
 .custom-btn {
     background-color: var(--pri-500);
@@ -515,11 +538,10 @@ button:focus {
     padding: 8px 0px;
     font-weight: 300;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     font-family: var(--font-primary);
     font-size: 20px;
-    // width: 209px;
-    border-radius: 50px;
+    // border-radius: 50px;
     .center();
 
     &:hover {
@@ -551,12 +573,9 @@ header {
     padding: 30px 0;
     background-color: var(--white);
     width: 100%;
-    // max-width: 1920px;
-    .padding-lr();
     box-sizing: border-box;
     //use these css fro fixed header
     position: relative;
-    z-index: 510;
     top: 0;
     box-sizing: border-box;
     transition: all 0.3s;
@@ -635,7 +654,7 @@ header {
 
     ul {
         .menu-alignment();
-        li {
+        > li {
             display: inline-block;
             // margin-left: 28px;
 
@@ -643,9 +662,9 @@ header {
             //     margin-left: 64px;
             // }
 
-            ul {
-                display: none;
-            }
+            // > ul {
+            //     display: none;
+            // }
 
             a {
                 color: var(--black);

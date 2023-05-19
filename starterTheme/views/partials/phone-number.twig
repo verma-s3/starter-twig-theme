@@ -1,6 +1,6 @@
 {# for adding the phone number for using this file and custmize accordign to phone number in design file use this code in footer.twig file
 
-    <a href="tel:{{ options.phone_number }}">{% set phoneNumber = options.phone_number %}{% include 'partials/phone-number.twig' %}</a>
+    <a href="tel:{{ options.phone_number }}"  aria-label="Phone us at {{options.phone_number}}">{% set phoneNumber = options.phone_number %}{% include 'partials/phone-number.twig' %}</a>
 
  #}
 

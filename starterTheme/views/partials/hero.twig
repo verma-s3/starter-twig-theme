@@ -12,7 +12,6 @@
 {# if the page is home page #}
 {% if fn('is_page',"10") %}
     <div class="hero">
-        <img class="img-responsive" src="{{Image(field.meta('hero_banner_image')).src}}" alt="{{Image(field.meta('about_image')).alt}}" />
-        
+         <img class="img-responsive" src="{{Image(field.meta('hero_banner')).src}}" alt="{{Image(field.meta('hero_banner')).alt}}" />
     </div>
 {% endif %}

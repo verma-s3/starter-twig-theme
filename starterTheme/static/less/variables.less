@@ -31,14 +31,14 @@ VARIABLES
 
 :root{
     //spacing
-    --space-unit: 1rem;
+    --space-unit: 16px;
     --space-xxs: calc(0.25 * var(--space-unit));   // 4px
     --space-xs: calc(0.5 * var(--space-unit));     // 8px
     --space-sm: calc(1 * var(--space-unit));       // 16px
     --space-md: calc(2 * var(--space-unit));       // 32px
     --space-lg: calc(4 * var(--space-unit));       // 64px
     --space-xl: calc(8 * var(--space-unit));       // 128px
-    --space-xxl: calc(16 * var(--space-unit));     // 256px
+    --space-xxl: calc(16 * var(--space-unit));     // 256px if 200px then 12.5
 
     //color-theory
     --pri-100: #34768C;
@@ -54,13 +54,19 @@ VARIABLES
     --sec-500: #FFFFFF;
 
     --ter-100: #000000;
-    --ter-100: #333333;
-    --ter-100: #4D4D4D;
-    --ter-100: #666666;
-    --ter-100: #808080;
+    --ter-200: #333333;
+    --ter-300: #4D4D4D;
+    --ter-400: #666666;
+    --ter-500: #808080;
 
-    --white: var(--sec-500);
-    --black: var(--ter-100);  
+    --neu-100: #2E2B28;
+    --neu-200: #757677;
+    --neu-300: #A7A8AA;
+    --neu-400: #DCDCDD;
+    --neu-500: #EDEEEE;
+
+    --white: #fff;
+    --black: #000;  
 
     //font
     --font-primary: 'sofia-pro', sans-serif;
