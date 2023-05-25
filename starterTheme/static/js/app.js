@@ -37,6 +37,8 @@ jQuery(document).ready(function($) {
   
   //*** Fixed header ***
   function fixedHeaderOnScroll(){
+    // var heroHeight = window.innerHeight; //use me if want to display fixed header according to innerHeight.
+    // if ($(this).scrollTop() >= heroHeight) {// 
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
         $('header').addClass('fixed-header');    // Fade in the arrow
     } else {
@@ -46,6 +48,16 @@ jQuery(document).ready(function($) {
   $(window).scroll(function () {
     fixedHeaderOnScroll();
   });
+
+  /************************************************
+  uncomment follwoing code if window.innerheight is
+  included in fixedHeaderOnScroll function.  
+  *************************************************/ 
+
+  // $(window).resize(function() {
+  //   fixedHeaderOnScroll();
+  // });
+
 
   //*** Scroll to Top *** use with less *** use with html ***
     // $(window).scroll(function() {
