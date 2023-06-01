@@ -203,8 +203,18 @@ body {
     z-index: 500;
     transition: opacity .25s ease;
 
-    &:hover {
-        opacity: .7;
+    @media @min1024{
+        &:hover{
+            span {
+                animation: hamburger 1s ease forwards;
+            }
+            &.active {
+                span {
+                    background-color: var(--pri-600);
+                    animation: none !important;
+                }
+            }
+        }
     }
 
     &.active {

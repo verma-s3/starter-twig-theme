@@ -1,5 +1,5 @@
-{# Imports #}
-{% import 'components/image.twig' as Logo %}
+{# Imports
+{% import 'components/image.twig' as Logo %} #}
 
 {# Blocks & Includes #}
 {% block html_head_container %}
@@ -18,7 +18,7 @@
 
         {% block header %}
             <header class="header">
-                <div class="wrapper w-1920">
+                <div class="wrapper container">
                     <a class="site-logo" href="{{site.url}}" rel="home" aria-label="{{site.name}}">
                         {# {{source (directory ~ '/static/images/logo/tricor-color-logo.svg') }} #}
                     </a>
@@ -54,7 +54,7 @@
         </section>
 
 
-        <div class="overlay" id="overlay" aria-hidden="hidden">            
+        <div class="overlay" id="overlay">            
            <a class="site-logo" href="{{site.url}}" rel="home" aria-label="{{site.name}}">
                 {# {{source (directory ~ '/static/images/logo/tricor-color-logo.svg') }} #}
             </a> 

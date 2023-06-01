@@ -36,18 +36,21 @@
 // paddings
 // ========================================================================== //
 .padding-lr{
-  padding-inline: var(--space-xs);
+  padding-inline: var(--space-sm);
   @media @min768{
-    padding-inline: var(--space-sm);
+    padding-inline: var(--space-md);
   }
   @media @min1024{
-    padding-inline: var(--space-md)
+    padding-inline: var(--space-lg)
   }
 }
 .padding-tb(){
   padding-block: var(--space-md);
-  @media @min1024{
+  @media @min768{
     padding-block: var(--space-lg);
+  }
+  @media @min1024{
+    padding-block: var(--space-xl);
   }
 }
 .padding-tb(@mobile, @desktop){
@@ -59,6 +62,12 @@
 .padding{
   .padding-lr();
   .padding-tb();
+}
+.conatiner-top{
+  margin-top: var(--space-md);
+  @media @min768{
+    margin-top: var(--space-lg);
+  }
 }
 // ========================================================================== //
 // margins
@@ -102,4 +111,22 @@
   display: flex;
   gap: calc(2.5 * var(--space-unit));;
   align-items: center;
+}
+
+// ========================================================================== //
+// Other Mixins
+// ========================================================================== //
+
+.transition{
+  transition: all 0.35 ease-in-out;
+}
+
+@keyframes hamburger {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
