@@ -189,9 +189,9 @@ class StarterSite extends Timber\Site
 	*/
 	// public function widget_area() {
 	// 	register_sidebar( array(
-	// 		'name'          => esc_html__( 'Sidebar', 'themename' ),
+	// 		'name'          => esc_html__( 'Sidebar', 'evergreen' ),
 	// 		'id'            => 'sidebar-1',
-	// 		'description'   => esc_html__( 'Add widgets here.', 'themename' ),
+	// 		'description'   => esc_html__( 'Add widgets here.', 'evergreen' ),
 	// 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 	// 		'after_widget'  => '</section>',
 	// 		'before_title'  => '<h2 class="widget-title">',
@@ -273,7 +273,7 @@ class StarterSite extends Timber\Site
 		
 	// *** login title ***
 	public function login_logo_url_title() {
-		return 'themename';
+		return 'evergreen';
 	}
 
 	// *** Remove unecessary menu items for all but Administrators ***
@@ -288,19 +288,19 @@ class StarterSite extends Timber\Site
 
 	// *** Remove Editor ***
 	public function remove_editor() {
-		if (isset($_GET['post'])) {
-			$id = $_GET['post'];
-			$template = get_post_meta($id, '_wp_page_template', true);
-			switch ($template) {
-				case 'page-templates/page-home.php':
+		// if (isset($_GET['post'])) {
+		// 	$id = $_GET['post'];
+		// 	$template = get_post_meta($id, '_wp_page_template', true);
+		// 	switch ($template) {
+		// 		case 'page-templates/page-home.php':
 
 				remove_post_type_support('page', 'editor');
-				break;
-				default :
-				// Don't remove any other template.
-				break;
-			}
-		}
+		// 		break;
+		// 		default :
+		// 		// Don't remove any other template.
+		// 		break;
+		// 	}
+		// }
 	}
 
 	/* Use Options Page Globally */
@@ -422,7 +422,7 @@ class StarterSite extends Timber\Site
 	 */
 	public function theme_register_nav_menus() {
 		register_nav_menus( array(
-			'primary_menu' => esc_html__( 'Primary Menu', 'themename' ),
+			'primary_menu' => esc_html__( 'Primary Menu', 'evergreen' ),
 		) );		
 	}
 
