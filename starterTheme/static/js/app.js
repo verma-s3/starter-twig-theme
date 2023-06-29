@@ -138,3 +138,34 @@ jQuery(document).ready(function($) {
   
 });
   
+
+
+// // Close modal w/ Esc key
+// $(document).keyup(function(e) {
+//   if ($(".modal").hasClass("open")) {
+//     if (e.key === "Escape") {
+//       $(".modal").removeClass("open");
+//       $("html").removeClass("locked");
+//     }
+//   }
+// });
+
+// // Close modal w/ outside click
+// $(document).mouseup(function(e) {
+//   if ($(".modal").hasClass("open")) {
+//     const container = $(".modal__container");
+//     if (!container.is(e.target) && container.has(e.target).length === 0) {
+//       $(".modal").removeClass("open");
+//       $("html").removeClass("locked");
+//     }
+//   }
+// });
+
+// // Close overlay menu w/ Esc key
+// $(document).keyup(function(e) {
+//   if ($("header").hasClass("open")) {
+//     if (e.key === "Escape") {
+//       $("#hamburger").click();
+//     }
+//   }
+// });
