@@ -19,7 +19,7 @@ include('config.php');
  * @package WordPress
  */
 
-
+ define('WP_MEMORY_LIMIT', '64M');
 /**#@+
  * Authentication Unique Keys and Salts.
  *
