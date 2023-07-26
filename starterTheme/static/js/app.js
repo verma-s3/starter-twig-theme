@@ -1,24 +1,24 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   fixedHeaderOnScroll();
-  $('#toggle').click(function() {
+  $('#toggle').click(function () {
     $(this).toggleClass('active');
     $('#overlay').toggleClass('open');
     $('html').toggleClass('hidden');
-   });
+  });
 
- 
-    // Closes overlay menu after clicking on the menu link
-    $('#site-navigation3 ul li a').on("click", function (e) {
-        $('#toggle').click();
-    });
-         
-    AOS.init({
-        duration: 1200,
-        easing:'ease-in-quad',
-        disable: 'mobile',
-        once: true
-    });
-   
+
+  // Closes overlay menu after clicking on the menu link
+  $('#site-navigation3 ul li a').on("click", function (e) {
+    $('#toggle').click();
+  });
+
+  AOS.init({
+    duration: 1200,
+    easing: 'ease-in-quad',
+    disable: 'mobile',
+    once: true
+  });
+
   // //*** Smooth Scroll ***
   //   $(function() {
   //     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -34,15 +34,28 @@ jQuery(document).ready(function($) {
   //       }
   //     });
   //   });//End Smooth Scroll
-  
+
+  // SEcond-way Add smooth scrolling to all links
+  // $(function () {
+  //   $("a").on('click', function (event) {
+  //     event.preventDefault();
+  //     var hash = this.hash;
+  //     $('html, body').animate({
+  //       scrollTop: $(hash).offset().top
+  //     }, 800, function () {
+  //       window.location.hash = hash;
+  //     });
+  //   });
+  // });//End Smooth Scroll
+
   //*** Fixed header ***
-  function fixedHeaderOnScroll(){
+  function fixedHeaderOnScroll() {
     // var heroHeight = window.innerHeight; //use me if want to display fixed header according to innerHeight.
     // if ($(this).scrollTop() >= heroHeight) {// 
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $('header').addClass('fixed-header');    // Fade in the arrow
+      $('header').addClass('fixed-header');    // Fade in the arrow
     } else {
-        $('header').removeClass('fixed-header');   // Else fade out the arrow
+      $('header').removeClass('fixed-header');   // Else fade out the arrow
     }
   }
   $(window).scroll(function () {
@@ -52,7 +65,7 @@ jQuery(document).ready(function($) {
   /************************************************
   uncomment follwoing code if window.innerheight is
   included in fixedHeaderOnScroll function.  
-  *************************************************/ 
+  *************************************************/
 
   // $(window).resize(function() {
   //   fixedHeaderOnScroll();
@@ -60,22 +73,22 @@ jQuery(document).ready(function($) {
 
 
   //*** Scroll to Top *** use with less *** use with html ***
-    // $(window).scroll(function() {
-    //     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-    //         $('#return-to-top').fadeIn(200);    // Fade in the arrow
-    //     } else {
-    //         $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-    //     }
-    // });
-  
-    // $('#return-to-top').click(function() {      // When arrow is clicked
-    //     $('body,html').animate({
-    //         scrollTop : 0                       // Scroll to top of body
-    //     }, 500);
-    // });//End Scroll to Top
-  
+  // $(window).scroll(function() {
+  //     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+  //         $('#return-to-top').fadeIn(200);    // Fade in the arrow
+  //     } else {
+  //         $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+  //     }
+  // });
 
-  
+  // $('#return-to-top').click(function() {      // When arrow is clicked
+  //     $('body,html').animate({
+  //         scrollTop : 0                       // Scroll to top of body
+  //     }, 500);
+  // });//End Scroll to Top
+
+
+
   //*** Flexslider ***
   // var $flexslider = $('.flex-slider');
   // $flexslider.flexslider({
@@ -135,9 +148,9 @@ jQuery(document).ready(function($) {
   //   ]
   // });
 
-  
+
 });
-  
+
 
 
 // // Close modal w/ Esc key

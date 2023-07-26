@@ -339,8 +339,10 @@ body {
     }
 
     .overlay-nav-main {
-        margin-block-start: 120px;
-        .padding-lr();
+        margin-block-start: 150px;
+        // height: calc(100% - 150px); // if the footer like site by psone is very bottom then use these setting and flex: 1 in last second div.
+        // display: flex;
+        // flex-direction: column;
 
         .overlay-menu {
             position: relative;
@@ -461,7 +463,7 @@ form {
     }
 
     select{
-        background: url("/wp-content/themes/themename/static/images/drop-down.svg") no-repeat;
+        background: url("@{images}/drop-down.svg") no-repeat;
         background-size: 12px;
         background-position: calc(100% - 10px) center;
         background-repeat: no-repeat;

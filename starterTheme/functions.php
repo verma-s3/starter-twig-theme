@@ -189,9 +189,9 @@ class StarterSite extends Timber\Site
 	*/
 	// public function widget_area() {
 	// 	register_sidebar( array(
-	// 		'name'          => esc_html__( 'Sidebar', 'evergreen' ),
+	// 		'name'          => esc_html__( 'Sidebar', 'themename' ),
 	// 		'id'            => 'sidebar-1',
-	// 		'description'   => esc_html__( 'Add widgets here.', 'evergreen' ),
+	// 		'description'   => esc_html__( 'Add widgets here.', 'themename' ),
 	// 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 	// 		'after_widget'  => '</section>',
 	// 		'before_title'  => '<h2 class="widget-title">',
@@ -273,7 +273,7 @@ class StarterSite extends Timber\Site
 		
 	// *** login title ***
 	public function login_logo_url_title() {
-		return 'evergreen';
+		return 'themename';
 	}
 
 	// *** Remove unecessary menu items for all but Administrators ***
@@ -422,7 +422,7 @@ class StarterSite extends Timber\Site
 	 */
 	public function theme_register_nav_menus() {
 		register_nav_menus( array(
-			'primary_menu' => esc_html__( 'Primary Menu', 'evergreen' ),
+			'primary_menu' => esc_html__( 'Primary Menu', 'themename' ),
 		) );		
 	}
 
