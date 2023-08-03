@@ -206,7 +206,7 @@ class StarterSite extends Timber\Site
 				.login #login h1 a {
 					background-image: url(' . get_stylesheet_directory_uri() . '/static/images/logo_horizontal_reverse.svg);
 					background-size: contain;
-				background-position: center;
+					background-position: center;
 					width: 100%;
 				}
 				.login #login form label {
