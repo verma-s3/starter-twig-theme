@@ -4,6 +4,9 @@ jQuery(document).ready(function ($) {
     $(this).toggleClass('active');
     $('#overlay').toggleClass('open');
     $('html').toggleClass('hidden');
+    if ($('header').hasClass('fixed-header')) {
+      $('header').toggleClass('overlay-header');
+    }
   });
 
 
