@@ -174,11 +174,8 @@ class StarterSite extends Timber\Site
 	 */
 	public function scripts_and_styles() {
 		wp_enqueue_style( 'dashicons' );
-		wp_enqueue_script( 'my-script', get_template_directory_uri() . '/static/js/all.min.js', array('jquery'), true );	
-		// wp_enqueue_script( 'slick-script', get_template_directory_uri() . '/slick/slick.min.js', array('jquery'), true );	
-		// wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/slick/slick.css' );
-		// wp_enqueue_style( 'slick-theme-css', get_template_directory_uri() . '/slick/slick-theme.css' );
-		wp_enqueue_style( 'my-style', get_template_directory_uri() . '/static/css/main.css');	
+		wp_enqueue_script( 'my-script', get_template_directory_uri() . '/static/js/all.min.js', array('jquery'), filemtime(get_template_directory() . '/static/js/all.min.js'));
+		wp_enqueue_style( 'my-style', get_template_directory_uri() . '/static/css/main.css', array(), filemtime(get_template_directory() . '/static/css/main.css'));
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
