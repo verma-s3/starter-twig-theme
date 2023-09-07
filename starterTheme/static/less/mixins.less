@@ -145,17 +145,19 @@
 // ========================================================================== //
 
 .menu-alignment{
-  display: flex;
-  gap: calc(2.5 * var(--space-unit));;
-  align-items: center;
+  .display-flex(flex, var(--space-40), row, center);
 }
 
 // ========================================================================== //
 // Other Mixins
 // ========================================================================== //
 
-.transition{
-  transition: all 0.35 ease-in-out;
+.transition {
+  transition: all 0.35s ease-in-out;
+}
+
+.transition2 {
+  transition: all 0.45s ease-in-out;
 }
 
 @keyframes hamburger {

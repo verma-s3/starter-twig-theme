@@ -3,6 +3,7 @@
 VARIABLES
 ======================================================================
 */
+@min500: ~"screen and (min-width: 500px)";
 @min768: ~"screen and (min-width: 768px)";
 @min992: ~"screen and (min-width: 992px)";
 @min1024: ~"screen and (min-width: 1024px)";
@@ -16,9 +17,10 @@ VARIABLES
 @min1800: ~"screen and (min-width: 1800px)";
 @min1920: ~"screen and (min-width: 1920px)";
 
-@max768: ~"screen and (max-width: 768px)";
-@max992: ~"screen and (max-width: 992px)";
-@max1024: ~"screen and (max-width: 1024px)";
+@max500: ~"screen and (max-width: 501px)";
+@max768: ~"screen and (max-width: 767px)";
+@max992: ~"screen and (max-width: 991px)";
+@max1024: ~"screen and (max-width: 1023px)";
 
 
 @images: "/wp-content/themes/azidrilling/static/images"; //change theme name accordingly.
@@ -42,7 +44,7 @@ VARIABLES
     //spacing
     --space-unit: 16px;
     --space-xxs: calc(0.25 * var(--space-unit)); // 4px
-    --space-xs: calc(0.5 * var(--space-unit)); // 8px
+    --space-xs: calc(1.25 * var(--space-unit)); // 8px
     --space-sm: calc(1 * var(--space-unit)); // 16px
     --space-md: calc(2 * var(--space-unit)); // 32px
     --space-lg: calc(4 * var(--space-unit)); // 64px
@@ -50,9 +52,12 @@ VARIABLES
     --space-xxl: calc(16 * var(--space-unit)); // 256px if 200px then 12.5
     
     //other extra spaces
+    --space-12: calc(0.75 * var(--space-unit)); //12px
+    --space-20: calc(0.75 * var(--space-unit)); //20px
     --space-24: calc(1.5 * var(--space-unit)); //24px
     --space-40: calc(2.5 * var(--space-unit)); //40px
     --space-48: calc(3 * var(--space-unit)); //48px
+    --space-80: calc(5 * var(--space-unit)); //80px
     --space-96: calc(6 * var(--space-unit)); //96px
 
     //color-theory

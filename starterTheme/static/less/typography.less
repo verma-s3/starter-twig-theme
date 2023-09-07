@@ -60,3 +60,24 @@ mark{
     transition: all .3s ease-in-out;
 }
 
+.anchor {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 2px;
+    .transition2();
+
+    &:hover {
+        color: var(--sec-100);
+        text-decoration-color: var(--sec-100);
+        text-decoration-thickness: 3px;
+        text-underline-offset: 6px;
+    }
+}
+
+.letter-spacing(@mb, @dk){
+    letter-spacing: ~"@{mb}px";
+    @media @min768{
+        letter-spacing: ~"@{dk}px";
+    }
+}
