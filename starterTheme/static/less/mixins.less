@@ -36,19 +36,13 @@
 // paddings
 // ========================================================================== //
 .padding-lr{
-  padding-inline: var(--space-sm);
-  @media @min768{
-    padding-inline: var(--space-md);
-  }
+  padding-inline: var(--space-md);
   @media @min1024{
     padding-inline: var(--space-lg)
   }
 }
-.padding-tb(){
-  padding-block: var(--space-md);
-  @media @min768{
-    padding-block: var(--space-lg);
-  }
+.padding-tb{
+  padding-block: var(--space-lg);
   @media @min1024{
     padding-block: var(--space-xl);
   }
@@ -63,24 +57,18 @@
   .padding-lr();
   .padding-tb();
 }
-// .padding-top{
-//   padding-top: var(--space-sm);
-//   @media @min768{
-//     padding-top: var(--space-md);
-//   }
-//   @media @min1024{
-//     padding-top: var(--space-lg);
-//   }
-// }
-// .padding-bottom{
-//   padding-bottom: var(--space-sm);
-//   @media @min768{
-//     padding-bottom: var(--space-md);
-//   }
-//   @media @min1024{
-//     padding-bottom: var(--space-lg);
-//   }
-// }
+.padding-top{
+  padding-top: var(--space-md);
+  @media @min1024{
+    padding-top: var(--space-lg);
+  }
+}
+.padding-bottom{
+  padding-bottom: var(--space-md);
+  @media @min1024{
+    padding-bottom: var(--space-lg);
+  }
+}
 .container-top{
   margin-top: var(--space-md);
   @media @min768{
@@ -89,33 +77,30 @@
 }
 
 
-// .container-top-2{
-//   margin-top: var(--space-lg);
-//   @media @min768{
-//     margin-top: var(--space-80);
-//   }
-// }
-
-// scroll-behavior::after
-.scroll-margin{
-  scroll-margin-top: var(--space-sm);
+.container-top-2{
+  margin-top: var(--space-lg);
   @media @min768{
-    scroll-margin-top: var(--space-md);
-  }
-  @media @min1024{
-    scroll-margin-top: var(--space-lg);
+    margin-top: var(--space-80);
   }
 }
+
+// scroll-behavior::after
+// .scroll-margin{
+//   scroll-margin-top: var(--space-sm);
+//   @media @min768{
+//     scroll-margin-top: var(--space-md);
+//   }
+//   @media @min1024{
+//     scroll-margin-top: var(--space-lg);
+//   }
+// }
 // ========================================================================== //
 // margins
 // ========================================================================== //
 .margin-lr{
-  margin-inline: var(--space-xs);
-  @media @min768{
-    margin-inline: var(--space-sm);
-  }
+  margin-inline: var(--space-md);
   @media @min1024{
-    margin-inline: var(--space-md)
+    margin-inline: var(--space-lg)
   }
 }
 

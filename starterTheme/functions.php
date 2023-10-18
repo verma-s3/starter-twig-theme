@@ -91,7 +91,7 @@ class StarterSite extends Timber\Site
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts_and_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'loadGoogleFonts' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'loadFavicon' ) );
-		add_action( 'widgets_init', array( $this, 'widget_area' ) );
+		// add_action( 'widgets_init', array( $this, 'widget_area' ) );
 		add_action( 'login_head', array( $this, 'custom_login_logo' ) );
 		add_filter( 'login_headerurl', array( $this, 'login_logo_url' ) );
 		add_filter( 'login_headertext', array( $this, 'login_logo_url_title' ) );
@@ -100,7 +100,6 @@ class StarterSite extends Timber\Site
 		add_filter( 'timber_context', array( $this, 'options_page_global' ) );
 		add_action('wp_before_admin_bar_render', array( $this, 'admin_custom_logo' ) );
 		add_action( 'after_setup_theme', array( $this, 'theme_register_nav_menus' ) );
-		add_action( 'after_setup_theme', array( $this, 'image_cropping_sizes' ) );
 		add_action( 'after_setup_theme', array( $this, 'acf_options_page_for_theme' ) );
 		add_action( 'init', array( $this, 'register_custom_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
@@ -108,7 +107,7 @@ class StarterSite extends Timber\Site
 		add_action( 'admin_menu', array( $this, 'remove_default_post_type') );
 		add_action( 'wp_before_admin_bar_render', array( $this, 'my_admin_bar_render') );
 		add_action( 'admin_menu', array( $this, 'my_remove_admin_menus') );
-		add_action('init', array( $this, 'remove_comment_support', 100) );
+		add_action('init', array( $this, 'remove_comment_support'), 100 );
 		add_action( 'wp_before_admin_bar_render', array( $this, 'mytheme_admin_bar_render') );
 		add_action( 'add_attachment', array( $this, 'my_set_image_meta_upon_image_upload') );
 
@@ -184,7 +183,7 @@ class StarterSite extends Timber\Site
 	/**
 	 * Register widget area.
 	*/
-	// public function widget_area() {
+	public function widget_area() {
 	// 	register_sidebar( array(
 	// 		'name'          => esc_html__( 'Sidebar', 'themename' ),
 	// 		'id'            => 'sidebar-1',
@@ -194,7 +193,7 @@ class StarterSite extends Timber\Site
 	// 		'before_title'  => '<h2 class="widget-title">',
 	// 		'after_title'   => '</h2>',
 	// 	) );
-	// }
+	}
 
 	// *** login logo ***
 	public function custom_login_logo() {
@@ -433,12 +432,6 @@ class StarterSite extends Timber\Site
 		}		
 	}
 
-	/**
-	 * Image Cropping Sizes
-	 */
-	public function image_cropping_sizes() {
-		add_image_size('hero', 1640, 768, true);
-	}
 
 	/****************
 	 * Admin styling
@@ -611,21 +604,5 @@ class StarterSite extends Timber\Site
 		} 
 	}
 }
-
-//estimated reading time
-// function reading_time() {
-// 	$content = get_post_field( 'post_content', $post->ID );
-// 	$word_count = str_word_count( strip_tags( $content ) );
-// 	$readingtime = ceil($word_count / 200);
-	
-// 	if ($readingtime == 1) {
-// 	$timer = " minute";
-// 	} else {
-// 	$timer = " minutes";
-// 	}
-// 	$totalreadingtime = $readingtime . $timer;
-	
-// 	return $totalreadingtime;
-// }
 
 new StarterSite();
